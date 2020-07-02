@@ -1,5 +1,7 @@
 package first.application.Classes;
 
+import org.springframework.security.core.userdetails.UserDetailsService;
+
 import javax.persistence.*;
 
 @Entity
@@ -16,6 +18,16 @@ public class User {
     private String username;
     @Column
     private String password;
+    @Column
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public Long getId() {
         return id;
